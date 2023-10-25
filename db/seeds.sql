@@ -10,7 +10,7 @@ VALUES ("Sales Representative", 52000, 1),
        ("Sales Manager", 80000, 1),
        ("IT Support Specialist", 60000, 2),
        ("JR Solutions Developer", 70000, 2),
-       ("VP of Technology", 200000, 2),
+       ("VP Technology", 200000, 2),
        ("Market Researcher", 40000, 3),
        ("Marketing Manager", 58000, 3),
        ("Universal Agent", 40000, 4),
@@ -33,6 +33,6 @@ VALUES ("James", "Reed", 1, NULL),
        ("Amzudi", "French", 10, 4),
        ("Nori", "Stevens", 11, NULL),
        ("Suzie", "Que", 12, NULL), 
-       ("Paul", "Jones", 5);
+       ("Paul", "Jones",13, 5);
 
        

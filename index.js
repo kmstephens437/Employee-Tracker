@@ -1,12 +1,12 @@
-const inquirer = require("inquirer");
-const mysql = require("mysql");
+const inquirer = require('inquirer');
+const mysql = require('mysql');
 
 require('dotenv').config();
 
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'localhost', 
     user: 'root',
-    password:process.env.MYSQL_PASSWORD,
+    password: process.env.MYSQL_PASSWORD,
     database: 'tracker_db'
 });
 
@@ -25,5 +25,25 @@ connected = () => {
     inquirerStart();    
 };
 
-const inquirerStart = () =>
+const inquirerStart = () => {
+    inquirer.prompt ([
+        {
+            type:"list",
+            name:"options",
+            message: "What would you like to do?",
+            choices: [
+                "View all departments",
+                "View all roles",
+                "View all employees",
+                "Add a department",
+                "Add a role",
+                "Add an employee",
+                "Update an employee role"
+                    ]
+        }
+    ])
+        .then((answers) => {
+
+        })
+}
 

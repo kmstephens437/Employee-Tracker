@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql');
+const cTable = require('console-table');
 
 require('dotenv').config();
 
@@ -78,8 +79,22 @@ const inquirerStart = () => {
 
 
 listDepartments = () => {
-    db.query('SELECT * FROM department', function (err,results) {
-        console.log(results);
+    db.query('SELECT department.name, department.id FROM department', function (err,results) {
+        console.table(results);
+        inquirerStart();
     });
 };
 
+listRoles = () => {
+    db.query("SELECT * FROM role", function (err,results) {
+        console.table(results);
+        inquirerStart();
+    })
+};
+
+listEmployee = () => {
+    db.query ("SELECT employee.first_name, employee.last_name FROM employee", function (err,results) {
+        console.table(results);
+        inquirerStart();
+    } )
+}

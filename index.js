@@ -6,7 +6,7 @@ require('dotenv').config();
 const db = mysql.createConnection({
     host: 'localhost', 
     user: 'root',
-    password: process.env.MYSQL_PASSWORD,
+    password:'',
     database: 'tracker_db'
 });
 
@@ -43,7 +43,43 @@ const inquirerStart = () => {
         }
     ])
         .then((answers) => {
+            const { options } = answers;
+
+            if (options === "View all departments") {
+                listDepartments();
+            }
+
+            if (options === "View all roles") {
+                listRoles();
+            }
+
+            if (options === "View all employees") {
+                listEmployee();
+            }
+
+            if (options === "Add a department") {
+                addDepartment();
+            }
+
+            if (options === "Add a role") {
+                addRole();
+            }
+
+            if (options === "Add an employee") {
+                addEmployee();
+            }
+
+            if (options === "Update an Employee role") {
+                updateEmployeeRole();
+            }
 
         })
 }
+
+
+listDepartments = () => {
+    db.query('SELECT * FROM department', function (err,results) {
+        console.log(results);
+    });
+};
 

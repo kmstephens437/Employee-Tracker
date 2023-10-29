@@ -1,5 +1,5 @@
 # Employee-Tracker
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 
 This application was designed for any company personnel charged with the resposibility to manage employee records. It is a one stop spot for viewing and updating an employee database in a speedy, convenient manner. 

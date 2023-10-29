@@ -11,5 +11,5 @@ To get started, clone the repository into your local environment. You'll need to
 ## Video sample
 
 ## License
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 MIT License
